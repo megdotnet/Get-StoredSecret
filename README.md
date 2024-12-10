@@ -5,9 +5,9 @@ This script is intended to work with other automated scripts that use credential
 The goal is to catch instances of failed credentials and inform sysadmins of the failure.
 
 ## Requirements
- * the PowerShell SecretStore module
- * the PowerShell SecretManagement module
- * secret names must be in the format `domain.tld\user`
+ * the PowerShell SecretStore module [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.SecretStore/)
+ * the PowerShell SecretManagement module [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.SecretManagement/)
+ * these modules need to be set up with an existing secret store. 
  * valid credentials for the SMTP server must also be stored in the secret store.
    this script cannot test those.  how would it send the mail if they failed??  lol
  * Only use this script on a computer that's on the same domain as the user account to be tested.  
@@ -27,7 +27,8 @@ $telemetry = @{
      hostname = $env:COMPUTERNAME
 }
 
-# retrieve creds from the secret store and test
+# retrieve creds from the secret store and test 
+# stored secrets must be in the domain.tld\user format
 $cred = Get-StoredSecret domain.tld\user @telemetry
 ```
 
