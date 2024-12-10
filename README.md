@@ -1,7 +1,9 @@
 # Get-StoredSecret
 
 ## Description
-This script is intended to work with other automated scripts that use credentials and are presumably already retrieving secrets from a secret store.  The goal is to catch instances of failed credentials and inform sysadmins of the failure, and to inform the sysadmins of the location of the script.
+This script is intended to work with other automated scripts that use credentials stored in the Microsoft Secret Store.  The goal is to catch instances of failed credentials and inform sysadmins of the failure.  
+
+This script will retrieve the specified credentials, test them against the domain for valididty, and return them to the calling script.  In the case of failure, an email will be sent to informing recipients of the failure, and providng information about the location of the script. 
 
 ## Requirements
  * the PowerShell SecretStore module [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.SecretStore/)
