@@ -3,11 +3,11 @@
 ## Description
 This script is intended to work with other automated scripts that use credentials stored in the Microsoft Secret Store.  The goal is to catch instances of failed credentials and inform sysadmins of the failure.  
 
-This script will retrieve the specified credentials, test them against the domain for valididty, and return them to the calling script.  In the case of failure, an email will be sent to informing recipients of the failure, and providng information about the location of the script. 
+This script will retrieve the specified credentials, test them against the domain for validity, and return them to the calling script.  In the case of failure, an email will be sent to informing recipients of the failure, and providing information about the location of the calling script. 
 
 ## Requirements
- * the PowerShell SecretStore module [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.SecretStore/)
- * the PowerShell SecretManagement module [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.SecretManagement/)
+ * the PowerShell [SecretStore](https://www.powershellgallery.com/packages/Microsoft.PowerShell.SecretStore/) module 
+ * the PowerShell [SecretManagement](https://www.powershellgallery.com/packages/Microsoft.PowerShell.SecretManagement/) module
  * these modules need to be set up with an existing secret store. 
  * valid credentials for the SMTP server must also be stored in the secret store.
    this script cannot test those.  how would it send the mail if they failed??  lol
