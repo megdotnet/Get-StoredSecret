@@ -1,0 +1,14 @@
+# Created by https://www.toptal.com/developers/gitignore/api/powershell
+# Edit at https://www.toptal.com/developers/gitignore?templates=powershell
+
+### PowerShell ###
+# Exclude packaged modules
+*.zip
+
+# Exclude .NET assemblies from source
+*.dll
+
+config.ps1
+
+# End of https://www.toptal.com/developers/gitignore/api/powershell
+test.ps1
