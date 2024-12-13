@@ -14,8 +14,9 @@ This script will retrieve the specified credentials, test them against the domai
  * Only use this script on a computer that's on the same domain as the user account to be tested.  
 
 ## Instructions
+ * Clone the repository.
  * Modify the file `config_template.ps1` and save it as `config.ps1`.
- * Clone the repository and insert the following code in the script that will be calling on this one:  
+ * Insert the following code in the script that will be calling on this one:  
 
 ```powershell
 # import the script
